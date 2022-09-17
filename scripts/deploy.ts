@@ -3,8 +3,8 @@ import { ethers, run } from "hardhat";
 const tokenURI = "";
 
 async function main() {
-  const CalestialBodies = await ethers.getContractFactory("CalestialBodies");
-  const nftCollection = await CalestialBodies.deploy(tokenURI);
+  const Medals = await ethers.getContractFactory("Medals");
+  const nftCollection = await Medals.deploy(tokenURI);
 
   await nftCollection.deployTransaction.wait(2);
 
